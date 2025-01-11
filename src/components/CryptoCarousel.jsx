@@ -18,14 +18,14 @@ function CryptoCarousel({ title, cards }) {
         <div className="flex absolute z-0 justify-center items-center py-1.5 inset-y-[58px] min-h-[44px] right-[-11px] w-[27px]">
           <div className="flex overflow-hidden flex-col self-stretch my-auto w-[34px]">
             <div className="flex overflow-hidden flex-col justify-center items-center w-full min-h-[34px]">
-              <img loading="lazy" src="../public/assets/Nextslide.png" />
+              <img loading="lazy" src="../assets/Nextslide.png" />
             </div>
           </div>
         </div>
         <div className="flex absolute z-0 justify-center items-center py-1.5 inset-y-[58px] min-h-[44px] right-[1292px] rotate-[3.141592653589793rad] w-[27px]">
           <div className="flex overflow-hidden flex-col self-stretch my-auto w-[34px]">
             <div className="flex overflow-hidden flex-col justify-center items-center w-full min-h-[34px]">
-              <img loading="lazy" src="../public/assets/Prevslide.png" />
+              <img loading="lazy" src="../assets/Prevslide.png" />
             </div>
           </div>
         </div>

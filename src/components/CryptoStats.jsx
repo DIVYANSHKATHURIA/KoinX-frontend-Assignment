@@ -52,13 +52,15 @@ export function CryptoStats() {
     return () => clearInterval(interval);
   }, [trendingCoins]);
 
-  const formatNumber = (num) => {
-    return new Intl.NumberFormat('en-US').format(num?.toFixed(2) || 0);
-  };
+  // const formatNumber = (num) => {
+  //   return new Intl.NumberFormat('en-US').format(num?.toFixed(2) || 0);
+  // };
 
   if (!selectedCoin) return <div>Loading...</div>;
 
   const coinPriceData = priceData[selectedCoin.id];
+  // console.log(coinPriceData?.usd);  
+  //         console.log(coinPriceData?.inr);
 
   return (
     <div className="flex flex-col justify-center px-6 py-7 w-full bg-white rounded-lg max-md:pl-5">
@@ -107,8 +109,8 @@ export function CryptoStats() {
       {/* Price Display */}
       <div className="flex flex-wrap gap-4 items-start mt-6">
         <div className="flex flex-col text-slate-900">
-          <div className="text-2xl font-semibold">${formatNumber(coinPriceData?.usd)}</div>
-          <div className="text-base">₹ {formatNumber(coinPriceData?.inr)}</div>
+          <div className="text-2xl font-semibold">${(coinPriceData?.usd)}</div>
+          <div className="text-base">₹ {(coinPriceData?.inr)}</div>
         </div>
         <div
           className={`flex items-center px-2 py-1.5 text-sm rounded ${
@@ -151,7 +153,7 @@ export function CryptoStats() {
           title={`${selectedCoin.name} Price Chart`}
           src={`https://s.tradingview.com/widgetembed/?frameElementId=tradingview_chart&symbol=${selectedCoin.symbol}USDT&interval=${
             activeTimeFrame === "1H" ? "60" : "D"
-          }`}
+          }&style=3`}
           style={{ width: "100%", height: "400px" }}
           frameBorder="0"
         />
